@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
+import { poppins } from '@/styles/fonts'
 
-const inter = Inter({ subsets: ['latin'] })
+
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +16,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+        <head>
+              <link
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+                rel="stylesheet"
+              />
+        </head>
+          <body style={poppins.style}>{children}</body>
     </html>
   )
 }
