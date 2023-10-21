@@ -1,9 +1,36 @@
 {
+    "data": {
+        "user": {
+            "id": "0001",
+            "name": "Vishroy Seenarain",
+            "email": "vishseenarain@gmail.com",
+            "team": "Imagine Failing",
+            "profilePic": "face"
+        },
+        "teams": [
+            "Imagine Failing",
+            "Tech Phantoms",
+            "Error 404",
+            "Les Daltons",
+            "Spades"
+        ]
+    },
     "ui": {
-        "side-bar": [
+        "sideBar": [
             {
-                "title": "Dashboard",
-                "href": ""
+                "title": "Home",
+                "href": "/",
+                "icon": "home"
+            },
+            {
+                "title": "Seating plan",
+                "href": "/seating",
+                "icon": "event_seat"
+            },
+            {
+                "title": "Parking",
+                "href": "/parking",
+                "icon": "directions_car"
             }
         ]
     }
