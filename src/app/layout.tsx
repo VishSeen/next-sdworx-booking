@@ -1,9 +1,10 @@
-'use client'
-
 import type { Metadata } from 'next'
 import './globals.css'
 import { poppins } from '@/styles/fonts'
-import SideBar from '@/components/side-bar/side-bar'
+export const metadata: Metadata = {
+    title: "Seat Booking",
+    description: "A seating booking system for employees."
+}
 
 
 export default function RootLayout({
@@ -21,7 +22,6 @@ export default function RootLayout({
         </head>
 
           <body style={poppins.style}>
-                <SideBar />
                 {children}
           </body>
     </html>
