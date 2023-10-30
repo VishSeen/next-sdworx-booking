@@ -2,13 +2,14 @@
 
 import { FunctionComponent } from "react"
 import StyledForm from "./style";
-import { Formik } from "formik";
-import { Inputs } from "@/types/type";
+import { Formik, useFormik } from "formik";
 import config from '../../../config.json';
 
-
-
 const FormBooking: FunctionComponent = () => {
+    // const formik = useFormik({
+    //     initialValues: {}
+    // });
+
     return (
         <StyledForm>
             <h3>
@@ -19,17 +20,17 @@ const FormBooking: FunctionComponent = () => {
                 <label htmlFor="">
                     Team Selection
                 </label>
-                <select
-                    id="team select"
-                    name="team"
-                    onChange={() => console.log("hello")}
-                >
-                    {
-                        config?.data?.teams.map((item, i) => (
-                            <option key={i} value={item}>{item}</option>
-                        ))
-                    }
-                </select>
+
+                {/* <div className="team-select">
+                    <Select defaultValue={10}>
+                        {
+                            config?.data?.teams.map((item, i) => (
+                                <Option key={i} value={item}>{item}</Option>
+                            ))
+                        }
+                    </Select>
+                </div> */}
+
             </form>
         </StyledForm>
     )
